@@ -9,6 +9,7 @@ def to_scientific_notation(number, dec):
     """
     Converts a number into scientific notation.
     :param number: The number to convert.
+    :param dec: The number of significant digits.
     :return: A string representing the number in scientific notation.
     """
     #return "{:.3e}".format(number)
@@ -16,6 +17,6 @@ def to_scientific_notation(number, dec):
     return format_string.format(number)
 
 
-num = float(input("Enter a number: "))
-dec = float(input("Enter the number of significant digits: ")) - 1
-print("Scientific notation:", to_scientific_notation(num, dec))
+num = float(input("Number: "))
+dec = float(input("Sig Digs: ")) - 1
+print("Sci Not:", to_scientific_notation(num, dec))
