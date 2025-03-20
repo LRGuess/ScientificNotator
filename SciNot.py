@@ -17,6 +17,9 @@ def to_scientific_notation(number, dec):
     return format_string.format(number)
 
 
-num = float(input("Number: "))
-dec = float(input("Sig Digs: ")) - 1
-print("Sci Not:", to_scientific_notation(num, dec))
+try:
+    num = float(input("Number: "))
+    dec = float(input("Sig Digs: ")) - 1
+    print("Sci Not:", to_scientific_notation(num, dec))
+except ValueError:
+    print("Enter numeric values!")
