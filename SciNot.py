@@ -12,7 +12,8 @@ def to_scientific_notation(number, dec):
     :return: A string representing the number in scientific notation.
     """
     #return "{:.3e}".format(number)
-    return f"{number:.{int(dec)}e}"
+    format_string = "{:." + str(int(dec)) + "e}"
+    return format_string.format(number)
 
 
 num = float(input("Enter a number: "))
